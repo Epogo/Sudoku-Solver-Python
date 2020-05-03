@@ -8,7 +8,7 @@
 
 #You can to choose either to load sudoku as a file named sudoku.txt with unsolved sudoku or type it by key.
 class Sudoku:
-  def __init__(self, file =1):
+  def __init__(self, file =0):
 #Open a file
     if file:
       self.sudoku = [[],[],[],[],[],[],[],[],[]]
@@ -105,7 +105,7 @@ class Sudoku:
     f.write("\n\n Hope you enjoyed the solver!")
 
   
-sodu = Sudoku();  
+sodu = Sudoku("sudoku.txt");  
 sodu.PrintBoard();
 sodu.Solver();
 print("This is the Solved Sudoku:\n");
